@@ -301,111 +301,49 @@ languages:
 
   markdown:
     - <<: *markdownlint-lint
-    - <<: *textlint-lint
     - <<: *redpen-lint
     - <<: *vale-lint
     - <<: *nvcheck-lint
-    - <<: *prettier-action-fix
     - <<: *pandoc-markdown-format
 
   json:
     - <<: *jsonlint-lint
     - <<: *jq-format
     - <<: *fixjson-format
-    - <<: *prettier-action-fix
 
   json5:
     - <<: *fixjson-format
-    - <<: *prettier-action-fix
 
   text:
-    - <<: *textlint-lint
     - <<: *redpen-text-lint
     - <<: *vale-lint
     - <<: *nvcheck-lint
 
   help:
-    - <<: *textlint-lint
     - <<: *redpen-text-lint
     - <<: *vale-lint
     - <<: *nvcheck-lint
 
-  cpp:
-    - <<: *cppcheck-lint
-
-  c:
-    - <<: *cppcheck-lint
-
-  sh:
-    - <<: *shellcheck-lint
-    - <<: *shfmt-format
-
-  zsh:
-    - <<: *shellcheck-lint
-
   yaml:
     - <<: *yamllint-lint
-    - <<: *prettier-action-fix
 
   rst:
     - <<: *restructuredtext-lint-lint
     - <<: *rstcheck-lint
-    - <<: *textlint-lint
     - <<: *redpen-lint
     - <<: *vale-lint
     - <<: *nvcheck-lint
     - <<: *pandoc-rst-format
 
   asciidoc:
-    - <<: *textlint-lint
     - <<: *redpen-lint
 
   review:
-    - <<: *textlint-lint
     - <<: *redpen-lint
-
-  javascript:
-    - <<: *eslint-lint
-
-  typescript:
-    - <<: *eslint-lint
-    - <<: *prettier-action-fix
-
-  css:
-    - <<: *stylelint-lint
-    - <<: *prettier-action-fix
-
-  scss:
-    - <<: *stylelint-lint
-    - <<: *prettier-action-fix
-
-  sass:
-    - <<: *stylelint-lint
-
-  less:
-    - <<: *stylelint-lint
-
-  sugarss:
-    - <<: *stylelint-lint
 
   python:
     - <<: *flake8-lint
     - <<: *mypy-lint
-
-  ruby:
-    - <<: *rubocop-lint
-    - <<: *rufo-format
-
-  graphql:
-    - <<: *prettier-action-fix
-
-  vue:
-    - <<: *prettier-action-fix
-
-  html:
-    - <<: *textlint-lint
-    - <<: *htmllint-lint
-    - <<: *prettier-action-fix
 
   _:
     - <<: *excitetranslate-hover
